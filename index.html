@@ -178,5 +178,23 @@
          <p>If you don't check the box above, we'll tell you when we launch, and you won't hear from us again after that</p>
          <p>We'll send books all over the UK</p>
       </footer>
+
+      <script>
+        // fire an event when the form submits
+        var interestForm = document.querySelectorAll('form')[0];
+
+        interestForm.addEventListener('submit', function (evt) {
+          evt.preventDefault();
+          evt.stopPropagation();
+
+          ga('send', {
+            hitType: 'event',
+            eventCategory: 'Register interest',
+            eventAction: 'submit'
+          });
+
+          interestForm.submit();
+        }, false);
+      </script>
    </body>
 </html>
