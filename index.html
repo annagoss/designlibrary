@@ -187,10 +187,14 @@
           evt.preventDefault();
           evt.stopPropagation();
 
+          var bookEntered = (document.getElementById('mce-BOOKNAME').value === '') ? 'no' : 'yes';
+          var emailEntered = (document.getElementById('mce-EMAIL').value === '') ? 'no' : 'yes';
+
           ga('send', {
             hitType: 'event',
             eventCategory: 'Register interest',
-            eventAction: 'submit'
+            eventAction: 'submitted',
+            eventValue: 'bookEntered=' + bookEntered + '&emailEntered=' + emailEntered;
           });
 
           interestForm.submit();
