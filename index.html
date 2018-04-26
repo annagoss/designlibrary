@@ -20,132 +20,141 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- End Google Tag Manager -->
 
      <meta name="viewport" content="width=device-width">
-      <style>
-         * {
-            margin: 0;
-            padding: 0;
-            font-family: inherit;
-            font-size: inherit;
-            line-height: inherit;
-            font-weight: inherit;
-            color: inherit;
-            font-style: inherit;
-         }
-         *:focus {
-            box-shadow: 0 25px 50px #f02875;
-            outline: none;
-         }
-         html {
-            background: black;
-         }
-         body {
-            background: #f1f1f1;
-            font-family: 'Helvetica Neue', sans-serif;
-            font-weight: bold;
-            font-size: 14px;
-            line-height: 1.1;
-            vertical-align: baseline;
-            color: #f02875;
-            -webkit-font-smoothing: antialiased;
-         }
-         @media(max-width: 500px) {
-            body {
-               font-size: 2.75vw;
-            }
-         }
-         @media(min-width: 1100px) {
-            body {
-               font-size: 1.3vw;
-            }
-         }
-         header {
-            background: url(book.jpg) no-repeat center top;
-            background-size: 100% auto;
-            padding: 5.5em 1.1em;
-            min-height: 50vh;
-         }
-         h1 {
-            text-align: center;
-            font-size: 200%;
-            line-height: 50vh;
-         }
-         h1 strong {
-            font-size: 150%;
-            text-transform:uppercase;
-         }
-         main {
-            padding: 0 1.1em;
-            margin: 0 auto;
-            max-width: 21em;
-            font-size: 150%;
-         }
-         main p {
-            margin: 0 0 2.2em;
-         }
-         form label {
-            display: block;
-            margin: 2.2em 0;
-         }
-         form span {
-            display: block;
-         }
-         form input {
-            margin-top: 0.55em;
-            box-sizing: border-box;
-            border: 1px solid;
-            background: transparent;
-            width: 100%;
-            padding: 0.275em;
-         }
-         form button {
-            position: relative;
-            border: none;
-            background: #f02875;
-            color: #f1f1f1;
-            padding: 0.275em;
-            cursor: pointer;
-            display: block;
-            margin: 0 auto;
-         }
-         form button:after {
-            content: ".";
-            color: transparent;
-            position: absolute;
-            border-bottom: 2px solid #f02875;
-            width: 100%;
-            left: 0;
-            bottom: -4px;
-            opacity: 0.5;
-         }
-         form button:hover:after {
-            opacity: 1;
-         }
-         footer {
-            padding: 5.5em 1.1em;
-            text-align: center;
-         }
-         footer p {
-            font-size: 0.75em;
-         }
-         body:after {
-            content: '.';
-            position: fixed;
-            top: -50%;
-            right: -50%;
-            bottom: -50%;
-            left: -50%;
-            z-index: -1;
-            background: #f02875;
+     <link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet">
+     <style>
+        * {
+           margin: 0;
+           padding: 0;
+           font-family: inherit;
+           font-size: inherit;
+           line-height: inherit;
+           font-weight: inherit;
+           color: inherit;
+           font-style: inherit;
+        }
+        body {
+           position: relative;
+           text-transform: uppercase;
+           -webkit-font-smoothing: antialiased;
+           color: #f02875;
+           font-family: Karla, sans-serif;
+           font-weight: 800;
+           font-size: 40px;
+           font-size: 7vw;
+           word-spacing: 0.03em;
+           line-height: 1;
+           padding: 0 3%;
+        }
+        body:after {
+           position: fixed;
+           color: transparent;
+           content: ".";
+           top: -100px;
+           bottom: -100px;
+           left: 0;
+           border-left: 0.15em solid #f02875;
+        }
+        h1 {
+           margin: 33vh 0;
+        }
+        p {
+           margin-top: 1em;
+           max-width: 11em;
+           padding-left: 1.25em;
+           text-indent: -1.25em;
+        }
+        form {
+           font-size: 50%;
+           margin-top: 2em;
+        }
+        @media (min-width:640px) {
+           form {
+              padding: 0 2.5em 0 2.5em;
+           }
+        }
+        form div {
+           margin-bottom: 1em;
+           position: relative;
+        }
+        form label {
+           display: block;
+        }
+        form .email input,
+        form .details input {
+           margin-top: 0.25em;
+           width: 100%;
+           border: 0.15em solid;
+           font-family: serif;
+           font-weight: 400;
+           word-spacing: 0;
+           letter-spacing: 0;
+           padding: 0.15em 0.25em 0.25em;
+           box-sizing: border-box;
+           background: white;
+        }
+        form .email input:focus,
+        form .details input:focus,
+        form .subscribe input:focus+span:before,
+        form button:focus {
+           box-shadow: 0 25px 50px #f02875;
+           outline: none;
+        }
+        form .subscribe input {
+           position: absolute;
+           z-index: -10;
+           left: 0.2em;
+           top: 0.2em;
+        }
+        form .subscribe input+span:before {
+           content: "X";
+           font-family: serif;
+           font-weight: 400;
+           display: inline-block;
+           width: 1em;
+           height: 1em;
+           color: transparent;
+           border: 0.15em solid #f02875;
+           overflow: hidden;
+           cursor: pointer;
+           text-align: center;
+           background: white;
+        }
+        form .subscribe input:checked+span:before {
+           color: #f02875;
+        }
+        form button {
+           position: relative;
+           overflow: visible;
+           border: 0.15em solid #f02875;
+           background: #f02875;
+           color: white;
+           text-transform: uppercase;
+           padding: 0.25em 0.3em;
+           cursor: pointer;
+        }
+        form button:after {
+           position: absolute;
+           content: ".";
+           color: transparent;
+           bottom: -0.45em;
+           left: -0.15em;
+           right: -0.15em;
+           height: 0.15em;
+           background: #f02875;
+        }
+        footer {
+           padding: 1em 0;
+        }
+        footer p {
+           font-size: 16px;
+           text-transform: none;
+           line-height: 1.4;
+           max-width: 100%;
+           text-indent: 0;
+           padding: 0;
         }
 
-        div.mc-field-group.input-group label {
-          display: inline-block;
-        }
-
-        div.mc-field-group.input-group input {
-          width: auto;
-        }
-      </style>
+     </style>
       <title>Design Library London</title>
    </head>
    <body>
@@ -153,39 +162,38 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5F7MK8V"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
-      <header><h1><strong>Design Library</strong></h1></header>
-      <main>
-         <p>Borrow books about design, technology and internet culture.</p>
-         <p>We send them to you. You send them back when you're done.</p>
-         <p>We're currently building our library. Sign up to find out when we launch.</p>
+<header><h1><strong>Design Library</strong></h1></header>
+    <main>
+       <p>Borrow books about design, technology &amp; internet culture.</p>
+       <p>We send them to you. You send them back when you&#8217;re done.*</p>
+       <p>We&#8217;re currently building our library, sign up and&nbsp;we&#8217;ll let you know when we launch.</p>
 
 
-         <!-- Begin MailChimp Signup Form -->
-         <div id="mc_embed_signup">
-         <form action="https://london.us18.list-manage.com/subscribe/post?u=16b8af6f229636968e2860ed0&amp;id=086e405e44" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-             <div id="mc_embed_signup_scroll">
+       <!-- Begin MailChimp Signup Form -->
+       <div id="mc_embed_signup">
+       <form action="https://london.us18.list-manage.com/subscribe/post?u=16b8af6f229636968e2860ed0&amp;id=086e405e44" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+           <div id="mc_embed_signup_scroll">
 
-         <div class="mc-field-group">
-         	<label for="mce-EMAIL">Email address </label>
-         	<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
-         </div>
-         <div class="mc-field-group">
-         	<label for="mce-BOOKNAME">What do you want to read?</label>
-         	<input type="text" value="" name="BOOKNAME" class="" id="mce-BOOKNAME">
-         </div>
-         <div class="mc-field-group input-group">
-             <label>Subscribe to newsletter</label>
-             <input type="checkbox" value="1" name="group[106][1]" id="mce-group[106]-106-0">
-         </div>
-         <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-         <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_16b8af6f229636968e2860ed0_086e405e44" tabindex="-1" value=""></div>
-         <button type="submit" value="Let me know when you launch" name="subscribe" id="mc-embedded-subscribe">Let me know when you launch</button>
-         </form>
-         </div>
+       <div class="mc-field-group email">
+        <label for="mce-EMAIL">Email address </label>
+        <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+       </div>
+       <div class="mc-field-group details">
+        <label for="mce-BOOKNAME">What do you want to read?</label>
+        <input type="text" value="" name="BOOKNAME" class="" id="mce-BOOKNAME">
+       </div>
+       <div class="mc-field-group input-group subscribe">
+           <label><input type="checkbox" value="1" name="group[106][1]" id="mce-group[106]-106-0"><span>&nbsp;Subscribe to newsletter**</span></label>
+       </div>
+       <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+       <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_16b8af6f229636968e2860ed0_086e405e44" tabindex="-1" value=""></div>
+       <button type="submit" value="Let me know when you launch" name="subscribe" id="mc-embedded-subscribe">Let me know when you launch</button>
+       </form>
+       </div>
 
-         <!--End mc_embed_signup-->
+       <!--End mc_embed_signup-->
 
-      </main>
+    </main>
       <footer>
          <p>If you don't check the box above, we'll tell you when we launch, and you won't hear from us again after that</p>
          <p>We'll send books all over the UK</p>
